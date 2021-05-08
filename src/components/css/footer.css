@@ -1,0 +1,11 @@
+.footer {
+  background-color: #f0fff0;
+  color: black;
+  margin-top: 20px;
+}
+.footer__address {
+  font-family: "serif";
+}
+.footer__timings {
+  font-family: "Times New Roman", Times, serif;
+}

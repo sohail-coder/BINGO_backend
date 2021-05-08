@@ -1,0 +1,10 @@
+.count {
+  font-size: 15px;
+  border-radius: 60px;
+  margin-left: 0px;
+  text-align: center;
+}
+.title {
+  color: pink;
+  text-shadow: 2px 2px 8px #ff0000;
+}
