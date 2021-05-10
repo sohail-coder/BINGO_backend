@@ -22,11 +22,14 @@ app.use("/grocceries", grocceriesRouter);
 app.use("/homeAppliance", homeApplianceRouter);
 require("dotenv").config();
 // console.log(process.env.MURL);
-mongoose.connect(process.env.MURL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-});
+mongoose.connect(
+  "mongodb+srv://admin:Sohail99@cluster0.qypoy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  }
+);
 mongoose.connection.once("open", () => {
   console.log("connected to database");
 });
