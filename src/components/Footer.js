@@ -56,7 +56,7 @@ function Footer() {
       <p
         style={{ textAlign: "right", marginRight: "10px", fontFamily: "serif" }}
       >
-        Designed and Developed by <br /> <b>SOHAIL</b>
+        Designed,Developed and Maintained by <br /> <b>SOHAIL</b>
       </p>
     </div>
   );

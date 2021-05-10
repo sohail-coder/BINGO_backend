@@ -1,0 +1,32 @@
+.login__box {
+  /* margin-top: 100px;
+  margin-bottom: 50px;
+  margin-left: 150px;
+  margin-right: 75px; */
+  margin: 100px auto;
+  background-color: whitesmoke;
+  width: 50%;
+  border-radius: 10px;
+  align-self: center;
+  padding: 50px;
+}
+.login__form {
+  padding: 50px;
+  /* padding-bottom: 50px; */
+}
+.login__email {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-family: "Times New Roman", Times, serif;
+  /* border: 1px solid black;
+  padding: 10px; */
+}
+.login__password {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-family: "Times New Roman", Times, serif;
+  /* border: 1px solid black;
+  padding: 10px; */
+}
