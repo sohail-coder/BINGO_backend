@@ -20,15 +20,13 @@ app.use("/mobiles", mobilesRouter);
 app.use("/laptops", laptopsRouter);
 app.use("/grocceries", grocceriesRouter);
 app.use("/homeAppliance", homeApplianceRouter);
-
-mongoose.connect(
-  "mongodb+srv://admin:Sohail99@cluster0.qypoy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-  }
-);
+require("dotenv").config();
+// console.log(process.env.MURL);
+mongoose.connect(process.env.MURL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+});
 mongoose.connection.once("open", () => {
   console.log("connected to database");
 });
@@ -39,6 +37,6 @@ app.get("*", (req, res) => {
   res.status(404).send("oops cant find");
 });
 
-app.listen(process.env.PORT || 5000, function () {
-  console.log("listening to port " + PORT);
+app.listen(process.env.PORT, function () {
+  console.log("listening to port " + process.env.PORT);
 });
