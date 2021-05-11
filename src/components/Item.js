@@ -32,7 +32,7 @@ function Item(product) {
               <p style={{ marginLeft: "3px" }}>
                 FREE Delivery by Thursday, May{" "}
               </p>
-              <h5>{`https://bingo--server.herokuapp.com${product.uri}/${product._id}`}</h5>
+
               <div className="item__buttons">
                 <Button
                   variant="contained"

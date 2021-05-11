@@ -18,9 +18,6 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
-          <Route path="/home" exact>
-            <Body />
-          </Route>
           <Route path="/login" exact>
             <Login />
           </Route>
@@ -42,6 +39,9 @@ function App() {
           </Route>
           <Route path="/homeAppliance" exact>
             <HomeAppliance />
+          </Route>
+          <Route path="/">
+            <Body />
           </Route>
         </Switch>
         <Footer />
