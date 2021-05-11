@@ -11,6 +11,10 @@ var AccessoriesSchema = new Schema(
       type: Number,
       require: true,
     },
+    uri: {
+      type: String,
+      require: true,
+    },
     img: {
       type: String,
       require: true,
