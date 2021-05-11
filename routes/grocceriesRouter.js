@@ -27,11 +27,7 @@ grocceriesRouter
       .then((result) => {
         if (result) {
           res.type("application/json");
-<<<<<<< HEAD
           res.status(200).json(result);
-=======
-          res.status(200).send(result);
->>>>>>> c2008a2ee1bcad1c36bf5409ef7361bfbfeef272
         } else {
           res.status(404).send("not found");
         }
