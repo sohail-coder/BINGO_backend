@@ -26,6 +26,7 @@ grocceriesRouter
       .findOne({ _id: req.params.id })
       .then((result) => {
         if (result) {
+          res.type("application/json");
           res.status(200).send(result);
         } else {
           res.status(404).send("not found");
