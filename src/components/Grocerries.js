@@ -21,7 +21,7 @@ export default class Grocerries extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/grocceries")
+      .get("https://bingo--server.herokuapp.com/grocceries")
       .then((response) => {
         // console.log(response.data);
         this.setState({ grocerries: response.data });
@@ -31,7 +31,7 @@ export default class Grocerries extends Component {
 
   componentDidUpdate() {
     axios
-      .get("http://localhost:5000/grocceries")
+      .get("https://bingo--server.herokuapp.com/grocceries")
       .then((response) => {
         // console.log(rsponse.data);
 

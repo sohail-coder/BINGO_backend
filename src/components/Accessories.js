@@ -21,7 +21,7 @@ export default class Accessories extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/accessories")
+      .get("https://bingo--server.herokuapp.com/accessories")
       .then((response) => {
         // console.log(response.data);
         this.setState({ accessories: response.data });
@@ -31,7 +31,7 @@ export default class Accessories extends Component {
 
   componentDidUpdate() {
     axios
-      .get("http://localhost:5000/accessories")
+      .get("https://bingo--server.herokuapp.com/accessories")
       .then((response) => {
         // console.log(rsponse.data);
 

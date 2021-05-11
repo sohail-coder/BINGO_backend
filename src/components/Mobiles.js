@@ -21,7 +21,7 @@ export default class Mobiles extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/mobiles")
+      .get("https://bingo--server.herokuapp.com/mobiles")
       .then((response) => {
         // console.log(response.data);
         this.setState({ mobiles: response.data });
@@ -31,7 +31,7 @@ export default class Mobiles extends Component {
 
   componentDidUpdate() {
     axios
-      .get("http://localhost:5000/mobiles")
+      .get("https://bingo--server.herokuapp.com/mobiles")
       .then((response) => {
         // console.log(rsponse.data);
 

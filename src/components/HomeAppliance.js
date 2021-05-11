@@ -21,7 +21,7 @@ export default class HomeAppliance extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/homeAppliance")
+      .get("https://bingo--server.herokuapp.com/homeAppliance")
       .then((response) => {
         // console.log(response.data);
         this.setState({ homeAppliances: response.data });
@@ -31,7 +31,7 @@ export default class HomeAppliance extends Component {
 
   componentDidUpdate() {
     axios
-      .get("http://localhost:5000/homeAppliance")
+      .get("https://bingo--server.herokuapp.com/homeAppliance")
       .then((response) => {
         // console.log(rsponse.data);
 

@@ -21,7 +21,7 @@ export default class Laptops extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/laptops")
+      .get("https://bingo--server.herokuapp.com/laptops")
       .then((response) => {
         // console.log(response.data);
         this.setState({ laptops: response.data });
@@ -31,7 +31,7 @@ export default class Laptops extends Component {
 
   componentDidUpdate() {
     axios
-      .get("http://localhost:5000/laptops")
+      .get("https://bingo--server.herokuapp.com/laptops")
       .then((response) => {
         // console.log(rsponse.data);
 
