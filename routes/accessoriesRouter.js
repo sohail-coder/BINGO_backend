@@ -3,12 +3,23 @@ const mongoose = require("mongoose");
 const accessoriesRouter = express.Router();
 const accessories = require("../models/accessories");
 const bodyParser = require("body-parser");
+ObjectId = require("mongodb").ObjectID;
 // express.use(bodyParser.json());
+// res.status(200).send(cloth._id);
 accessoriesRouter
   .route("/")
   .post((req, res) => {
     var cloth = new accessories(req.body);
-    cloth.save().then(res.status(200).send("item added"));
+    cloth.id = cloth._id;
+    // console.log(cloth);
+    cloth
+      .save()
+      .then(function (result) {
+        if (result) res.status(200).send("yes");
+        else res.status(500).send("try again later");
+      })
+
+      .catch((err) => res.status(404).send("Not valid so not found"));
   })
   .get((req, res) => {
     var clothes = accessories.find({}).then(function (result) {

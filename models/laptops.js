@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 var LaptopSchema = new Schema(
   {
+    id: String,
     name: {
       type: String,
       require: true,

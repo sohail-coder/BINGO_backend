@@ -7,6 +7,7 @@ grocceriesRouter
   .route("/")
   .post((req, res) => {
     var cloth = new grocceries(req.body);
+    cloth.id = cloth._id;
     cloth.save().then(res.status(200).send("item added"));
   })
   .get((req, res) => {
