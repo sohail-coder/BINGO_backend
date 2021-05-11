@@ -2,7 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const accessoriesRouter = express.Router();
 const accessories = require("../models/accessories");
-
+const bodyParser = require("body-parser");
+// express.use(bodyParser.json());
 accessoriesRouter
   .route("/")
   .post((req, res) => {
@@ -26,7 +27,8 @@ accessoriesRouter
       .findOne({ _id: req.params.id })
       .then((result) => {
         if (result) {
-          res.status(200).send(result);
+          res.contentType("application/json");
+          res.status(200).json(result);
         } else {
           res.status(404).send("not found");
         }

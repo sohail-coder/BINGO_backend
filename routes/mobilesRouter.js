@@ -12,7 +12,8 @@ mobilesRouter
   .get((req, res) => {
     var clothes = mobiles.find({}).then(function (result) {
       if (result) {
-        res.status(200).send(result);
+        res.type("application/json");
+        res.status(200).json(result);
       } else {
         res.status(500).send("please try again");
       }
