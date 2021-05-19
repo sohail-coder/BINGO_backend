@@ -23,7 +23,6 @@ app.use("/grocceries", grocceriesRouter);
 app.use("/homeAppliance", homeApplianceRouter);
 app.use("/users", usersRouter);
 require("dotenv").config();
-// console.log(process.env.MURL);
 mongoose.connect(process.env.MURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
