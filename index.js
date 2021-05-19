@@ -11,6 +11,7 @@ const grocceriesRouter = require("./routes/grocceriesRouter");
 const homeApplianceRouter = require("./routes/homeApplianceRouter");
 const laptopsRouter = require("./routes/laptopsRouter");
 const mobilesRouter = require("./routes/mobilesRouter");
+const usersRouter = require("./routes/usersRouter");
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -20,6 +21,7 @@ app.use("/mobiles", mobilesRouter);
 app.use("/laptops", laptopsRouter);
 app.use("/grocceries", grocceriesRouter);
 app.use("/homeAppliance", homeApplianceRouter);
+app.use("/users", usersRouter);
 require("dotenv").config();
 // console.log(process.env.MURL);
 mongoose.connect(process.env.MURL, {

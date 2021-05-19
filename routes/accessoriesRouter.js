@@ -9,6 +9,7 @@ ObjectId = require("mongodb").ObjectID;
 accessoriesRouter
   .route("/")
   .post((req, res) => {
+    console.log(req.body);
     var cloth = new accessories(req.body);
     cloth.id = cloth._id;
     // console.log(cloth);
