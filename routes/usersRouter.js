@@ -4,22 +4,25 @@ const usersRouter = express.Router();
 const users = require("../models/users");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
-usersRouter.route("/").post((req, res) => {
-  const user = new users(req.body);
-  bcrypt.hash(user.password, 10).then(function (hash) {
-    user.password = hash;
+usersRouter
+  .route("/")
+  .post((req, res) => {
+    const user = new users(req.body);
+    bcrypt.hash(user.password, 10).then(function (hash) {
+      user.password = hash;
 
-    user
-      .save()
-      .then((data) => {
-        res.json({ status: "ok", data: "uploaded" });
-      })
-      .catch((err) => {
-        res.status(403);
-        res.json({ status: "error", data: err.keyPattern });
-      });
-  });
-});
+      user
+        .save()
+        .then((data) => {
+          res.json({ status: "ok", data: "uploaded" });
+        })
+        .catch((err) => {
+          res.status(403);
+          res.json({ status: "error", data: err.keyPattern });
+        });
+    });
+  })
+  .get((req, res) => res.status(403).send("oh boy u cant access this route"));
 
 usersRouter.route("/:id").get((req, res) => {
   // res.status(200).send(req.params.id);
